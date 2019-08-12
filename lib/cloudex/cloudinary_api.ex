@@ -113,9 +113,9 @@ defmodule Cloudex.CloudinaryApi do
   defp request_opts do
     [
       hackney: [
-        basic_auth: {Cloudex.Settings.get(:api_key), Cloudex.Settings.get(:secret)},
-        timeout: Cloudex.Settings.get(:timeout)
-      ]
+        basic_auth: {Cloudex.Settings.get(:api_key), Cloudex.Settings.get(:secret)}
+      ],
+      timeout: Cloudex.Settings.get(:timeout)
     ]
   end
 
